@@ -1,5 +1,7 @@
 import { FaBookmark } from "react-icons/fa";
 
+import PropTypes from "prop-types";
+
 const Blog = ({ blog }) => {
   const {
     cover,
@@ -31,7 +33,9 @@ const Blog = ({ blog }) => {
               <h3 className="text-base font-semibold text-slate-500">
                 {reading_time} min read
               </h3>
-              <FaBookmark className="text-base mt-1"></FaBookmark>
+              <button>
+                <FaBookmark className="text-base mt-1"></FaBookmark>
+              </button>
             </div>
           </div>
           <div>
@@ -51,6 +55,10 @@ const Blog = ({ blog }) => {
       </div>
     </div>
   );
+};
+
+Blog.propTypes = {
+  blog: PropTypes.object,
 };
 
 export default Blog;
