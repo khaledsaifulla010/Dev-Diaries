@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 
 const Blog = ({ blog, handleAddToBookmark, handleAddSpentTimes }) => {
   const {
+    id,
     cover,
     title,
     author_img,
@@ -46,7 +47,7 @@ const Blog = ({ blog, handleAddToBookmark, handleAddSpentTimes }) => {
             <h3> # {hashtags[1]}</h3>
           </div>
           <button
-            onClick={() => handleAddSpentTimes(reading_time)}
+            onClick={() => handleAddSpentTimes(reading_time, id)}
             className="underline text-violet-500 text-base font-semibold mr-[550px]"
           >
             Mark as read

@@ -14,8 +14,8 @@ const Bookmarks = ({ bookmarks, spentTimes }) => {
 
         <div className="divider px-4"></div>
         <div>
-          {bookmarks.map((bookmark) => (
-            <Bookmark key={bookmark.id} bookmark={bookmark}></Bookmark>
+          {bookmarks.map((bookmark, index) => (
+            <Bookmark key={index} bookmark={bookmark} index={index}></Bookmark>
           ))}
         </div>
       </div>

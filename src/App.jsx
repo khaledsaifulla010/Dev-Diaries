@@ -12,15 +12,21 @@ function App() {
     setBookmarks(newBookmarks);
   };
 
-  const [spentTimes, setSpentTimes]=useState(0)
+  const [spentTimes, setSpentTimes] = useState(0);
 
-  const handleAddSpentTimes = (time)=>{
-
+  const handleAddSpentTimes = (time, id) => {
     const newSpentTimes = spentTimes + time;
 
     setSpentTimes(newSpentTimes);
+    console.log("remove", id);
 
-  }
+    // Remove Bookmark
+
+    const remainingBookMarks = bookmarks.filter(
+      (bookmark) => bookmark.id !== id
+    );
+    setBookmarks(remainingBookMarks);
+  };
 
   return (
     <>
