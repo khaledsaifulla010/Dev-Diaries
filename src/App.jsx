@@ -12,13 +12,26 @@ function App() {
     setBookmarks(newBookmarks);
   };
 
+  const [spentTimes, setSpentTimes]=useState(0)
+
+  const handleAddSpentTimes = (time)=>{
+
+    const newSpentTimes = spentTimes + time;
+
+    setSpentTimes(newSpentTimes);
+
+  }
+
   return (
     <>
       <Headers></Headers>
 
       <div className="flex justify-between px-28 mt-12">
-        <Blogs handleAddToBookmark={handleAddToBookmark}></Blogs>
-        <Bookmarks bookmarks={bookmarks}></Bookmarks>
+        <Blogs
+          handleAddToBookmark={handleAddToBookmark}
+          handleAddSpentTimes={handleAddSpentTimes}
+        ></Blogs>
+        <Bookmarks bookmarks={bookmarks} spentTimes={spentTimes}></Bookmarks>
       </div>
     </>
   );
