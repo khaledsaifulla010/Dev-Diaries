@@ -37,6 +37,16 @@ const Blog = ({ blog }) => {
           <div>
             <h1 className="text-3xl mt-6 font-black">{title}</h1>
           </div>
+          <div className="flex items-center text-lg font-semibold text-slate-500 mt-4 gap-4">
+            <h3>#{hashtags[0]}</h3>
+            <h3> # {hashtags[1]}</h3>
+          </div>
+          <a
+            href=""
+            className="underline text-violet-500 text-base font-semibold"
+          >
+            Mark as read
+          </a>
         </div>
       </div>
     </div>

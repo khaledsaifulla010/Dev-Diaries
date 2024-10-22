@@ -15,7 +15,7 @@ const Blogs = () => {
     <div>
       {/* <h1>Total Blogs : {blogs.length} </h1> */}
 
-      <div className="space-y-10 ">
+      <div className="space-y-10 mb-20">
         {blogs.map((blog) => (
           <Blog key={blog.id} blog={blog}></Blog>
         ))}
